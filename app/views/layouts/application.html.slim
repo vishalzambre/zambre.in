@@ -5,6 +5,22 @@ html
       | ZambreIn
     = csrf_meta_tags
     = render 'layouts/head'
-
+    = content_for?(:head) ? yield(:head) : yield
   body
     = yield
+
+    footer
+      .container
+        .row
+          .col-lg-12
+            ul.list-inline
+              li
+                a href="#"  Home
+              li.footer-menu-divider &sdot;
+              li
+                a href="#about"  About
+              li.footer-menu-divider &sdot;
+              li.footer-menu-divider &sdot;
+              li
+                a href="#contact"  Contact
+            p.copyright.text-muted.small Copyright &copy; zambre.in 2016. All Rights Reserved

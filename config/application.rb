@@ -26,5 +26,6 @@ module ZambreIn
       g.helper = false
       g.template_engine :slim
     end
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   end
 end
