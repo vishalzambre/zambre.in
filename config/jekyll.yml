@@ -1,0 +1,15 @@
+# Site settings
+title: Vishal Zambre
+email: v.zambre@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Technical blogs
+baseurl: "/blog"
+url: "http://vishal.zambre.in" # the base hostname & protocol for your site
+twitter_username:     vzambre
+github_username:      vishalzambre
+linkedin_username:    vishal-zambre-92299721
+google_plus_username: 109342339132931229272
+facebook_username: vishal.zambre
+dribbble_username:
+# Build settings
+markdown: kramdown
