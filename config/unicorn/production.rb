@@ -1,5 +1,5 @@
 user 'deploy'
-root = '/srv/www/www.zambre.in/current' # e.g. /var/apps/rails_blog/current
+root = '/var/www/www.zambre.in/current' # e.g. /var/apps/rails_blog/current
 working_directory root
 
 pid "#{root}/tmp/pids/unicorn.pid"
