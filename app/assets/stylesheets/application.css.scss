@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
- *= require bootstrap.min.css
- *= require font-awesome.min.css
  */
+ 
+ @import 'bootstrap.min.css';
+ @import 'font-awesome.min.css';
