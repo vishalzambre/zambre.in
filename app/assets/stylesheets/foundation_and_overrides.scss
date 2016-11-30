@@ -1,0 +1,201 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+
+// If you'd like to include motion-ui the foundation-rails gem comes prepackaged with it, uncomment the 3 @imports, if you are not using the gem you need to install the motion-ui sass package.
+//
+// @import 'motion-ui/motion-ui';
+
+// We include everything by default.  To slim your CSS, remove components you don't use.
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+
+// If you'd like to include motion-ui the foundation-rails gem comes prepackaged with it, uncomment the 3 @imports, if you are not using the gem you need to install the motion-ui sass package.
+//
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
+
+.orbit-container {
+  position: relative;
+  height: 750px;
+}
+.orbit-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.9);
+}
+.orbit-caption p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fefefe;
+  font-size: 48px;
+  font-weight: 900;
+}
+@media screen and (max-width: 39.9375em) {
+.orbit-caption p{
+  font-size: 12px;
+  font-weight: 400;
+ }
+}
+
+.orbit-bullets {
+   display: none;
+}
+
+.full-width {
+  max-width: 1400px;
+}
+
+$text-color: #fff;
+
+// footer CSS
+
+.footer {
+  background-color: #2980b9;
+  padding: 2rem 4rem;
+  text-align: center;
+  color: $text-color;
+  i {
+    font-size: 100px;
+  }
+}
+
+.footer {
+  h4 {
+    color: $text-color;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+    margin-bottom: 10px;
+  }
+  p, a {
+    font-weight: 300;
+    font-size: .8em;
+    color: $text-color;
+  }
+}
+
+@media only screen and (min-width: 40.063em) {
+.footer {
+  .columns:nth-child(n+2) {
+    border-left: 1px solid scale-color($text-color, $lightness: -30%);
+    min-height: 280px;
+  }
+ }
+}
+
+.footer-links {
+  list-style-type: none;
+  li {
+    margin-top: .5em;
+  }
+}
+
+body {margin-top: 2rem;}
+
+$menu-background: #eee;
+
+.title-bar {
+  background: $menu-background;
+  padding: 0.9rem;
+}
+
+.top-bar {
+  background: $menu-background;
+
+  ul {
+    background: $menu-background;
+
+    li {
+      background: foundation-off-canvas;
+
+        a {
+          color: #fff;
+      }
+    }
+  }
+}
+
+.menu-text {
+  color: #fff;
+
+  @media only screen and (max-width: 40em) {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 40em) {
+  .menu:last-child {
+    border-left: 1px solid #4e4e4e;
+  }
+
+  .menu:first-child {
+    border-left: none;
+  }
+
+  .menu {
+    li:not(:last-child) {
+      border-right: 1px solid #4e4e4e;
+    }
+  }
+}
+
+.dropdown.menu .submenu {
+  border: none;
+}
+
+.dropdown.menu .is-dropdown-submenu-parent.is-right-arrow>a::after {
+  border-color: #fff transparent transparent;
+}
+
+.is-drilldown-submenu-parent>a::after {
+  border-color: transparent transparent transparent #fff;
+}
+
+.js-drilldown-back::before {
+  border-color: transparent #fff transparent transparent;
+}

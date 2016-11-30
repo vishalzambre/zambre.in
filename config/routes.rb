@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   root 'home#index'
+
+  resources :blogs, only: [:index]
+  resources :categories, only: [:index]
 end
