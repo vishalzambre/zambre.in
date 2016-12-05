@@ -2,7 +2,8 @@
 class BlogsController < ApplicationController
 
   def index
-    @blogs = Post.published.order_by_created_at
+    @posts = Post.all
+    @categories = Category.all
   end
 
   def search

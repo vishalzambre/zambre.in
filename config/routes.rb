@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :blogs, only: [:index]
-  resources :categories, only: [:index]
+  resources :categories, only: [:index, :show]
+  resources :posts, only: [:index, :show]
 end

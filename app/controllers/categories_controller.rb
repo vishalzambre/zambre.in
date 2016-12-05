@@ -7,4 +7,5 @@ class CategoriesController < ApplicationController
   def fetch_posts
     category = Category.find(params[:id])
     @posts = category.posts
+  end
 end

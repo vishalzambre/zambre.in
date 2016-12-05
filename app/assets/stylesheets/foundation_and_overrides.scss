@@ -135,29 +135,11 @@ $text-color: #fff;
   }
 }
 
-body {margin-top: 2rem;}
-
 $menu-background: #eee;
 
 .title-bar {
   background: $menu-background;
   padding: 0.9rem;
-}
-
-.top-bar {
-  background: $menu-background;
-
-  ul {
-    background: $menu-background;
-
-    li {
-      background: foundation-off-canvas;
-
-        a {
-          color: #fff;
-      }
-    }
-  }
 }
 
 .menu-text {
@@ -198,4 +180,11 @@ $menu-background: #eee;
 
 .js-drilldown-back::before {
   border-color: transparent #fff transparent transparent;
+}
+
+.hero {
+  background: url('dog.png') no-repeat center center;
+  background-size: cover;
+  height: 350px;
+  margin-bottom: 30px;
 }
