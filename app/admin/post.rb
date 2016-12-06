@@ -7,10 +7,11 @@ ActiveAdmin.register Post do
         attributes_table do
           row :id
           row :name
+          row 'short_description' do |post|
+            markdown(post.short_description)
+          end
           row 'content' do |post|
-            # raw post.content
             markdown(post.content)
-            # Redcarpet::Markdown.new(post.content).to_html
           end
           row :category_id
         end
@@ -29,6 +30,7 @@ ActiveAdmin.register Post do
   form do |f|
     f.inputs 'Post Details' do
       f.input :title
+      f.input :short_description
       f.input :content
       f.input :category_id, as: :select,
                             collection: Category.all.map { |u| [u.name.to_s, u.id] }

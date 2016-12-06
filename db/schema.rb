@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161128115714) do
+ActiveRecord::Schema.define(version: 20161205130834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,9 +48,10 @@ ActiveRecord::Schema.define(version: 20161128115714) do
     t.text     "content"
     t.boolean  "is_published"
     t.string   "image"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.integer  "category_id"
+    t.text     "short_description"
     t.index ["category_id"], name: "index_posts_on_category_id", using: :btree
   end
 

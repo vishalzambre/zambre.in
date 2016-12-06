@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :blogs, only: [:index]
   resources :categories, only: [:index, :show]
   resources :posts, only: [:index, :show]
+  resources :contacts
+  root :to => "contact_us/contacts#new"
 end

@@ -40,7 +40,12 @@ gem 'formtastic', github: 'justinfrench/formtastic'
 gem 'simple_form', '~> 3.2'
 gem 'ckeditor'
 gem 'foundation-rails'
+
+# for md file parse
 gem 'redcarpet'
+
+# for contact us form
+gem 'contact_us', '~> 1.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
