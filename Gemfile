@@ -24,12 +24,28 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'pundit'
 gem 'clearance'
-gem 'bootstrap-sass'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'unicorn'
+
+# for admin(activeadmin)
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
+gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
+gem 'ransack', '~> 1.3'
+gem 'formtastic', github: 'justinfrench/formtastic'
+gem 'simple_form', '~> 3.2'
+gem 'ckeditor'
+gem 'foundation-rails'
+
+# for md file parse
+gem 'redcarpet'
+
+# for contact us form
+gem 'contact_us', '~> 1.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

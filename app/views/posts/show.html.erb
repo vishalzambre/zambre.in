@@ -1,0 +1,46 @@
+<link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+<section class="hero">
+  <div class="row intro">
+    <div class="small-centered medium-uncentered medium-6 large-7 columns">
+      <h1>Truth? What truth?</h1>
+      <p>Don't you want to take a leap of faith? Or become an old man, filled with regret, waiting to die alone!</p>
+    </div>
+    <div class="small-centered medium-uncentered medium-6 large-5 columns">
+      <div class="tech-img"></div>
+    </div>
+  </div>
+</section>
+
+<div class="row" id="content">
+  <div class="medium-8 columns">
+    <div class="blog-post">
+      <h3><%= link_to @post.title, post_path(@post) %></h3>
+      <p><small> <%= @post.created_at %></small></p>
+      <p> <%= markdown(@post.content) %></p>
+      <div class="callout">
+        <ul class="menu simple">
+          <li><a href="#">Author: <%= 'Name' %></a></li>
+          <li><a href="#">Comments: <%= @post.comments.count %></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="medium-3 columns" data-sticky-container>
+    <div class="sticky" data-sticky data-anchor="content">
+      <h4>Categories</h4>
+      <ul>
+        <% @categories.each do |category| %>
+          <li><%= link_to category.name, category_path(category) %> </li>
+        <% end %>
+      </ul>
+
+      <h4>Authors</h4>
+      <ul>
+        <li><a href="#">Skyler</a></li>
+        <li><a href="#">Jesse</a></li>
+        <li><a href="#">Mike</a></li>
+        <li><a href="#">Holly</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
